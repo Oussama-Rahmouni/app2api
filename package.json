@@ -1,0 +1,33 @@
+{
+  "name": "app2api",
+  "version": "0.1.0",
+  "description": "APK in, API spec out — extract the API surface of an Android app: endpoints, auth scheme, headers, SDK keys, and security config, with an optional Frida + mitmproxy dynamic capture mode.",
+  "keywords": ["apk", "reverse-engineering", "android", "api", "jadx", "frida", "mitmproxy", "flutter", "mobile-security"],
+  "license": "MIT",
+  "author": "Oussama Rahmouni",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "app2api": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/",
+    "app2api": "npm run build --silent && node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
