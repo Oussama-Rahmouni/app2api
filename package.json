@@ -1,6 +1,6 @@
 {
   "name": "app2api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "APK in, API spec out — extract the API surface of an Android app: endpoints, auth scheme, headers, SDK keys, and security config, with an optional Frida + mitmproxy dynamic capture mode.",
   "keywords": ["apk", "reverse-engineering", "android", "api", "jadx", "frida", "mitmproxy", "flutter", "mobile-security"],
   "license": "MIT",
