@@ -5,6 +5,9 @@
   "keywords": ["apk", "reverse-engineering", "android", "api", "jadx", "frida", "mitmproxy", "flutter", "mobile-security"],
   "license": "MIT",
   "author": "Oussama Rahmouni",
+  "repository": { "type": "git", "url": "git+https://github.com/Oussama-Rahmouni/app2api.git" },
+  "homepage": "https://github.com/Oussama-Rahmouni/app2api#readme",
+  "bugs": "https://github.com/Oussama-Rahmouni/app2api/issues",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -24,7 +27,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "tsc -p tsconfig.test.json && node --test \"dist-test/test/**/*.test.js\"",
-    "app2api": "npm run build --silent && node dist/cli.js"
+    "app2api": "npm run build --silent && node dist/cli.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
